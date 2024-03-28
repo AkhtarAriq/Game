@@ -1,0 +1,274 @@
+#menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./img/bg/bghome.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+#menu button {
+  padding: 10px ;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.isiMenu {
+  position: absolute;
+  top: 25%;
+  left: 350px;
+}
+
+#redcontainer {
+  position: relative;
+  display: inline-block;
+}
+
+#redcontainer #smallcontainer {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 20px;
+}
+
+#playerhealth {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 4px solid white;
+  border-left: 4px solid white;
+  border-bottom: 4px solid white;
+}
+
+#phealth {
+  background-color: red;
+  height: 30px;
+  width: 100%;
+}
+
+#playerHealth {
+  position: absolute;
+  background: #4254f7;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#timer {
+  background-color: black;
+  width: 100px;
+  height: 50px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: 4px solid white;
+}
+
+#enemyhealth {
+  position: relative;
+  width: 100%;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  border-right: 4px solid white;
+}
+
+#ehealth {
+  background-color: red;
+  height: 30px;
+}
+
+#enemyHealth {
+  position: absolute;
+  background: #4254f7;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#displayText {
+  position: absolute;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: bellow -20px linear-gradient(transparent, rgba(0, 0, 0, 0));
+  font-size: 35px;
+}
+
+.waviy span {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  text-transform: uppercase;
+  animation: waviy 2s infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes waviy {
+  0%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(-20px);
+  }
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #000000;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#myPopUp {
+  display: none;
+  /* Awalnya disembunyikan */
+  position: fixed;
+  width: 700px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(74, 106, 233);
+  background: radial-gradient(
+    circle,
+    rgb(74, 106, 233) 0%,
+    rgb(234, 8, 8) 100%
+  );
+  /* Transparan */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 3;
+  /* Pastikan lebih tinggi dari menu */
+}
+
+.PopUp h2 {
+  font-size: 32px;
+  margin-bottom: 50px;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.infoP {
+  border: solid;
+  padding: 10px;
+  border-color: #000000;
+  width: 200px;
+  height: 400px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  justify-content: center;
+}
+
+.infoP p {
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.infoP:hover {
+  transform: translateY(-5px);
+}
+
+.infoP h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.infoP p {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+#backgroundOptions {
+  background: linear-gradient(to right, rgb(236, 51, 51), #ffffff, #ffffff, rgb(49, 70, 236));
+  top : 10px;
+  left : 10px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no;
+}
+
+#containermap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+}
+
+#containermap button {
+  width: 410px;
+    height: 550px;
+    padding: 2px;
+    padding-bottom: 34px;
+    background: linear-gradient(to right, rgb(71, 67, 67), #ffffff, #ffffff, rgb(71, 67, 67));
+    border-radius: 1px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    justify-content: center;
+}
+
+#containermap button:hover {
+  transform: translateY(-5px);
+}
+
+#containermap button img {
+  max-width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+}
+  
+#containermap button h3 {
+  margin-top: 5px; /* Jarak antara gambar dan teks */
+  font-size: 16px; /* Ukuran teks */
+  color: #524f4f;
+}
