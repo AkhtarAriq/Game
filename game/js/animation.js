@@ -23,3 +23,11 @@ const background1 = new Sprite({
     imageSrc: "./img/bg/bg2.jpg",
     scale: 1.16,
   });
+  const background3 = new Sprite({
+    position: {
+      x: -100,
+      y: -110,
+    },
+    imageSrc: "./img/bg/FIK.jpg",
+    scale: 0.8,
+  });

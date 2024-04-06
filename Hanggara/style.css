@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth; /* Animasi scrolling halus */
+}
+
+body {
+    background: #322c70;
+    color: #ffffff;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 25px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+nav a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+nav a:hover,
+nav a.active {
+    color: #4865b3;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 800;
+}
+
+.home-content h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.home-content p {
+    font-size: 13px;
+    margin: 20px 0 40px;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-box a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    position: relative;
+    transition: background 0.3s, color 0.3s; /* Menambahkan transisi untuk efek hover */
+}
+
+.btn-box a:hover {
+    background: #609ad3; /* Warna latar belakang saat hover */
+    color: #423da7; /* Warna teks saat hover */
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #609ad3;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ffffff;
+    z-index: -1;
+    transition: .5s;
+    border-radius: 8px;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+    position: absolute;
+}
+
+
+.contact-icons {
+    position: fixed;
+    top: 50%; /* Menempatkan di tengah vertikal */
+    right: 20px; /* Jarak dari tepi kanan */
+    transform: translateY(-50%); /* Pusatkan secara vertikal */
+    z-index: 1000; /* Pastikan tampil di atas konten lain */
+}
+
+.contact-icons a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.contact-icons a:hover {
+    transform: scale(1.9); /* Perbesar ikon saat dihover */
+}
+
+
+/* Menambahkan gaya untuk bagian riwayat pendidikan */
+.riwayat-pendidikan {
+    padding: 50px 0;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.riwayat-pendidikan h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: #ffffff;
+}
+
+.timeline-item {
+    margin-bottom: 50px;
+    margin-left: 50%;
+    position: relative;
+}
+
+.timeline-content {
+    padding: 20px;
+    background: #322c70;
+    /* border-radius: 10px; */
+    position: relative;
+    max-width: 350px;
+    margin-left: 10px;
+}
+
+.timeline-content h3 {
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    font-size: 14px;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #0f9a79;
+    left: -6px;
+    /* top: 7px; */
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Styling for Skill Section */
+.skill {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.skill h2 {
+    margin-bottom: 50px;
+    font-size: 36px;
+    color: #333;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-item {
+    width: 300px;
+    margin: 0 20px 40px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+.skill-item i {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.skill-item h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.skill-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+
+/* Menambah gaya untuk bagian Hobi */
+.hobi {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hobi h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.hobi-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.hobi-item {
+    width: 200px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.hobi-item:hover {
+    transform: translateY(-5px);
+}
+
+.hobi-item i {
+    font-size: 48px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.hobi-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.hobi-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Style untuk footer */
+.footer {
+    background-color: #081b29;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.contact-info ul li i {
+    margin-right: 10px;
+}
+.goback {
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    background-color: #4CAF50; 
+    border: none;
+    color: white; 
+    padding: 15px 32px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border-radius: 8px; 
+    transition-duration: 0.4s; 
+}
+.goback:hover {
+    background-color: #2d512f; 
+}
