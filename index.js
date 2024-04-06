@@ -313,7 +313,8 @@ function startGame() {
         }
       }
     }
-    //untuk kembali ke menu
+    //untuk kembali ke menu awal
+
     window.addEventListener("keydown", esc, false);
     function esc(e) {
       if (e.keyCode == 27) {
